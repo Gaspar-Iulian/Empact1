@@ -41,7 +41,6 @@ $id = 'NYT-'    . md5($day . $item->title);
 <html>
 <head>
 
-<script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>New-York Times</title>
 </head>
