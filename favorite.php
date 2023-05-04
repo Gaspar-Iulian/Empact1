@@ -14,7 +14,7 @@ $articles = $stmt->fetchAll();
 <body>
 	<header>
 		<h1 class="title-h1">Your Favorite Articles</h1>
-        <a href="testf.php" class="art-btn">Main Page</a>
+        <a href="index.php" class="art-btn">Main Page</a>
 	</header>
 	<main>
 		<?php
