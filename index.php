@@ -59,7 +59,7 @@ $id = 'NYT-'    . md5($day . $item->title);
                 </div>
             </form>
             <a href="favorite.php" class="art-btn">Favorite Articles</a>
-            <a href="testf.php" class="art-btn">Main Page</a>
+            <a href="index.php" class="art-btn">Main Page</a>
         </div>
   </header>
     <div class="container-box st-main">
