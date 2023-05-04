@@ -1,6 +1,6 @@
 <?php
 require_once('pdodb.php');
-
+// sql interogation and a function fetchall to add all te data in $articles
 $stmt = $pdo->query('SELECT * FROM news_articles ORDER BY realease_date DESC');
 $articles = $stmt->fetchAll();
 
@@ -18,12 +18,13 @@ $articles = $stmt->fetchAll();
 	</header>
 	<main>
 		<?php
+        // display articles
 			foreach ($articles as $article) {
 				echo '<div class="container-box">';
 				echo '<h3>' . $article['title'] . '</h3>';
 				echo '<p>' . $article['description'] . '</p>';
 				echo '<p>Release date: ' . $article['realease_date'] . '</p>';
-                echo '<p>' . $article['news_id'] . '</p>';
+               // echo '<p>' . $article['news_id'] . '</p>';
 				echo '<a class="rdm-a" href="' . $article['link'] . '">Read more...</a>';
                 echo '<form method="post" action="sterge.php">';
                 echo '<input type="hidden" name="news_id" value="' . $article['news_id'] . '">';

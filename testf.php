@@ -25,7 +25,8 @@ if (isset($_GET['search'])) {
             }
         }
     }
-} else {
+}
+ else {
     $searchResults = $items;
 }
 
@@ -45,7 +46,7 @@ $id = 'NYT-'    . md5($day . $item->title);
     <title>New-York Times</title>
 </head>
 <body>
-    <header>
+  <header>
         <h1 class="title-h1"><br>New-York Times News</h1>
         <div class="container-box">
             <form action="" class="search-bar">
@@ -58,15 +59,9 @@ $id = 'NYT-'    . md5($day . $item->title);
                 </div>
             </form>
             <a href="favorite.php" class="art-btn">Favorite Articles</a>
+            <a href="testf.php" class="art-btn">Main Page</a>
         </div>
-    </header>
-    <div id="popup" style="display:none;">
-  <div id="popup-container">
-    <h2>Articolul există deja în baza de date!</h2>
-  </div>
-</div>
-
-<script src="script.js"></script>
+  </header>
     <div class="container-box st-main">
         <h2><?php echo isset($_GET['search']) ? 'Search Results' : 'Latest News'; ?></h2>
         <?php if (empty($searchResults)) : ?>
